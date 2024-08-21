@@ -16,21 +16,19 @@ class ViewController: UIViewController {
     var image2Index = 5
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        diceImageView1.image = UIImage(named: "DiceSix")
+//        super.viewDidLoad()
+//        diceImageView1.image = UIImage(named: "DiceSix")
 //        diceImageView1.alpha = 0.4
-        diceImageView2.image = UIImage(named: "DiceTwo")
-        
+//        diceImageView2.image = UIImage(named: "DiceTwo")
+//        
     }
 
     @IBAction func rollButtonPressed(_ sender: UIButton) {
-//        Arrays - Intro - 14/08 - 
+//        Arrays - Intro - 14/08 -
         let diceImageView1Array = [UIImage(named: "DiceOne"), UIImage(named: "DiceTwo"), UIImage(named: "DiceThree"), UIImage(named: "DiceFour"), UIImage(named: "DiceFive"), UIImage(named: "DiceSix")]
-        diceImageView1.image = diceImageView1Array[image1Index]
-        image1Index = image1Index + 1
+        diceImageView1.image = diceImageView1Array[Int.random(in: 0...5)]
         
-        diceImageView2.image = diceImageView1Array[image2Index]
-        image2Index = image2Index - 1
+        diceImageView2.image = diceImageView1Array[Int.random(in: 0...5)]
     }
     
 }
